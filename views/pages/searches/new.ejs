@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../../partials/head',{pageTitle: 'Start Searching' }) %>
+
+
+  <body>
+
+    <%- include('../../partials/header')%>
+
+      <main>
+
+        <div class="search-form-container">
+
+          <form action="searches/results" method="post" class="search-form">
+
+            <label class="paragraphs-fonts " for="search">Enter Your Search</label>
+            <input type="text" name="search" required placeholder="Type to Go..">
+
+            <div class="radioBtn">
+
+              <legend class="radioBtn">
+                <input type="radio" value="title" name="search" required>
+                <label class="paragraphs-fonts " for="byTitle">By Title</label>
+              </legend>
+
+              <legend class="radioBtn">
+                <input type="radio" value="author" name="search" required>
+                <label class="paragraphs-fonts " for="byAuthor">By Author</label>
+              </legend>
+            </div>
+
+            <input class="paragraphs-fonts " type="submit" value="Start Searching">
+          </form>
+        </div>
+
+
+      </main>
+
+
+  </body>
+
+</html>

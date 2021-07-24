@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head',{pageTitle: 'Book Details' }) %>
+
+
+  <body>
+    <%- include('../partials/header')%>
+
+      <main>
+
+        <div class="books-container">
+          <div class="single-book">
+            <img class="img-item" src="<%= bookDetails.image %>" alt="lkn">
+            <p>
+              <%= bookDetails.title %>
+            </p>
+            <p>
+              <%= bookDetails.isbn %>
+            </p>
+            <p>
+              <%= bookDetails.authors %>
+            </p>
+            <p>
+              <%= bookDetails.description %>
+            </p>
+
+            <form action="/addToFavorite" method="POST">
+
+              <input type="hidden" value="<%=  bookDetails.image %>" name="image">
+              <input type="hidden" value="<%=  bookDetails.isbn %>" name="isbn">
+              <input type="hidden" value="<%=  bookDetails.title %>" name="title">
+              <input type="hidden" value="<%=  bookDetails.authors %>" name="authors">
+              <input type="hidden" value="<%=  bookDetails.description %>" name="description">
+
+              <input type="submit" value="Add to Favorite">
+            </form>
+
+
+          </div>
+        </div>
+
+      </main>
+  </body>
+
+</html>

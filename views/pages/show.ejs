@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head',{pageTitle: 'Book Search Results' }) %>
+
+
+  <body>
+    <%- include('../partials/header')%>
+
+      <main>
+        <div class="books-container">
+          <% booksDetails.forEach(e=> { %>
+            <div class="single-book">
+              <img class="img-item" src="<%= e.image %>" alt="lkn">
+
+              <table>
+                <tr>
+                  <th>Title</th>
+                  <td style="text-align: center;">
+                    <%= e.title %>
+                  </td>
+                </tr>
+                <tr>
+
+                  <th>ISBN: </th>
+                  <td style="text-align: center;">
+                    <%= e.isbn %>
+                  </td>
+                </tr>
+              </table>
+
+              <form action="/details" method="POST">
+
+                <input type="hidden" value="<%=  e.image %> " name="image">
+                <input type="hidden" value="<%=  e.isbn %> " name="isbn">
+                <input type="hidden" value="<%=  e.title %> " name="title">
+                <input type="hidden" value="<%=  e.authors %> " name="authors">
+                <input type="hidden" value="<%=  e.description %> " name="description">
+
+                <input class="button" type="submit" value="View Details">
+              </form>
+
+
+            </div>
+            <% }) %>
+        </div>
+      </main>
+  </body>
+
+</html>

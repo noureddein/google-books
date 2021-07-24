@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head',{pageTitle: 'Home Page' }) %>
+
+  <body>
+    <%- include('../partials/header')%>
+      <main>
+
+        <div class="books-container">
+
+          <% favoriteBooks.forEach(element=> { %>
+            <div class="single-book">
+              <img class="img-item" src="<%= element.image %>" alt="lkn">
+              <p class="paragraphs-fonts ">
+                <%= element.title %>
+              </p>
+              <p class="paragraphs-fonts ">
+                <%= element.isbn %>
+              </p>
+              <p class="paragraphs-fonts ">
+                <%= element.authors %>
+              </p>
+
+              <form action="/delete/<%= element.id %>?_method=delete " method="POST">
+
+                <input type="hidden" value="<%=  element.image %>" name="image">
+                <input type="hidden" value="<%=  element.isbn %>" name="isbn">
+                <input type="hidden" value="<%=  element.title %>" name="title">
+                <input type="hidden" value="<%=  element.authors %>" name="authors">
+                <input type="hidden" value="<%=  element.description %>" name="description">
+
+                <button class="button" type="submit">Delete</button>
+              </form>
+            </div>
+            <% }) %>
+        </div>
+
+      </main>
+  </body>
+
+</html>

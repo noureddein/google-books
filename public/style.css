@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap");
+body {
+  background: linear-gradient(
+    to top,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.search-form-container {
+  margin-top: 2rem;
+  font-size: 26px;
+}
+
+.search-form {
+  border: 1px solid black;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 1rem;
+}
+input {
+  height: 2rem;
+  text-align: center;
+}
+.radioBtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.books-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.single-book {
+  width: 30%;
+  /* border: 1px solid black; */
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
+}
+
+.img-item {
+  margin-bottom: 2rem;
+  height: 12rem;
+  border-radius: 10px;
+}
+
+header {
+  width: 100%;
+  background-color: burlywood;
+}
+.logo-img {
+  height: 5rem;
+  width: 14rem;
+  margin: 0.5rem 0;
+}
+.header-container {
+  margin: auto;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #035477;
+}
+
+.custom-login {
+  font-family: "Lobster", cursive;
+  color: aliceblue;
+  font-size: 25px;
+}
+.custom-login:hover {
+  color: rgb(235, 118, 118);
+  font-size: 28px;
+}
+
+.paragraphs-fonts {
+  font-size: 18px;
+  font-family: "Josefin Sans", sans-serif;
+  color: beige;
+}
+
+header {
+  box-shadow: 0 4px 8px 0 rgba(48, 48, 48, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.button {
+  width: 7rem;
+  height: 3rem;
+  color: wheat;
+  background-color: teal;
+  font-size: 18px;
+  font-family: "Exo 2", sans-serif;
+  outline: none;
+  margin-top: 1rem;
+  border-radius: 10px;
+  border: none;
+}
+
+.register-form {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-register {
+  margin: 1rem 0;
+}
+
+.reg-login-container {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}

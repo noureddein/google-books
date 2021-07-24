@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="/reset.css">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"
+      integrity="sha512-5fsy+3xG8N/1PV5MIJz9ZsWpkltijBI48gBzQ/Z2eVATePGHOkMIn+xTDHIfTZFVb9GMpflF2wOWItqxAP2oLQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <%- include('../partials/header')%>
+    <main>
+      <div class="reg-login-container">
+        <h2 style="color:#035477;">Register</h2>
+
+        <ul style="color: aliceblue;">
+          <% if (typeof errors !='undefined' ) { %>
+            <% errors.forEach(element=> { %>
+              <li>
+                <%= element.message %>
+              </li>
+              <% }) %>
+                <% } %>
+        </ul>
+
+        <form action="/users/register" method="POST" class="register-form">
+          <input class="input-register" type="text" name="name" id="name" required placeholder="Name">
+          <input class="input-register" type="email" name="email" id="emaail" required placeholder="Email">
+          <input class="input-register" type="password" name="password" id="password" required placeholder="Password">
+          <input class="input-register" type="password" name="password2" id="password2" required
+              placeholder="Confirm Password">
+          <input type="submit" value="Register!">
+          <a href="/users/login ">Already registered? Login here!</a>
+        </form>
+      </div>
+    </main>
+</body>
+
+</html>
